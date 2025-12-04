@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de creación de productos</title>
+    <!--BOX ICONS CDN-->
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <!--TAILWIND CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--COOLALERT CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/coolalertjs@latest/dist/coolalert.min.js"></script>
+</head>
+<body>
+    <header class="p-5 bg-zinc-700 flex items-center justify-between">
+        <div>
+            <h1 class="text-stone-100 text-5xl">Tienda TalentoTech <span><i class='bx  bx-store'></i> </span></h1>
+        </div>
+        <nav class="flex justify-between">
+
+            <ul class="flex justify-between gap-4 m-3 text-white text-xl font-bold">
+
+                <!--CUIDADO CON LOS A REF !!!!!!!!!!!!!!!!-->
+
+                <li class="bg-purple-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="index.html#listado-categorias">
+                        Listado de categorías
+                    </a>
+                </li>
+                
+                <li class="bg-purple-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="index.html#listado-productos">
+                        Listado de Productos
+                    </a>
+                </li>
+
+                <li class="bg-pink-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="#">
+                        Crear categoría
+                    </a>
+                </li>
+
+                <li class="bg-pink-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="formulario-producto.html">
+                        Crear producto
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+    
+        <main class="max-w-7xl mx-auto">
+            <!--ESTE TEXTO CAMBIA DINAMICAMENTE, DEPENDIENDO SI ES CREACIÓN O EDICIÓN-->
+            <h2 class="text-rose-600 text-5xl m-4 font-bold text-center" id="titulo">
+                Completa todos los datos para crear una nueva categoría
+            </h2>
+
+            <form action="" id="formulario-categoria" class="p-6 shadow-md text-3xl">
+                <div class="mb-5 flex">
+                    <label for="nombre" class="w-1/4 mr-4">Nombre de la categoría:</label>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        id="nombre" 
+                        placeholder="Nombre de la categoría" 
+                        required
+                        class="shadow-md shadow-slate-800/30 p-4 flex-1"
+                        >
+                </div>
+
+                <div class="flex justify-evenly mt-6">
+                    <button type="reset" class="py-4 px-5 rounded-xl text-neutral-100 bg-rose-600">Limpiar formulario</button>
+                    <input  type="submit" value="Enviar datos"
+                            class="py-4 px-5 rounded-xl text-neutral-100 bg-purple-600"
+                    >
+                    </input>
+                </div>
+
+                
+                
+            </form>
+
+        </main>
+
+        <script type="module" src="js/formulario-categoria.js"></script>
+    
+</body>
+</html>

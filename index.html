@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal CRUD productos Tienda TalentoTech</title>
+    <!--BOX ICONS CDN-->
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <!--TAILWIND CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--COOLALERT CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/coolalertjs@latest/dist/coolalert.min.js"></script>
+</head>
+<body>
+        
+    <header class="p-5 bg-zinc-700 flex items-center justify-between">
+        <div>
+                <h1 class="text-stone-100 text-5xl">Tienda TalentoTech <span><i class='bx  bx-store'></i> </span></h1>
+        </div>
+
+        <nav class="flex justify-between">
+            
+            <ul class="flex justify-between gap-4 m-3 text-white text-xl font-bold">
+
+                <li class="bg-purple-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="#listado-categorias">
+                        Listado de categorías
+                    </a>
+                </li>
+                
+                <li class="bg-purple-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="#listado-productos">
+                        Listado de Productos
+                    </a>
+                </li>
+
+                <!--CUIDADO CON LOS A HREF !!!!!!!!!!!!!!!!!!!!!-->
+
+                <li class="bg-pink-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="formulario-categoria.html">
+                        Crear categoría
+                    </a>
+                </li>
+
+                <li class="bg-pink-600 p-4 rounded-xl hover:bg-purple-400">
+                    <a href="./formulario-producto.html">
+                        Crear producto
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        </header>
+
+        <main class="max-w-[1408px] mx-auto">
+
+            <h2 class="text-rose-600 text-5xl m-4 font-bold text-center">
+                Gestión de productos y categorías de la tienda TalentoTech
+            </h2>
+
+            <!--SECCIÓN DONDE SE MUESTRAN LAS CATEGORÍAS-->
+            <section id="listado-categorias" class="shadow-md p-8">
+
+                <h2 class="text-purple-600 text-4xl text-center mb-5">Listado de categorías</h2>
+                
+                <div id="contenedor-categorias">
+
+                </div>
+                
+            </section>  
+
+            <!--SECCIÓN DONDE SE MUESTRAN LOS PRODUCTOS-->
+            <section id="listado-productos" class="shadow-md p-5">
+
+                <h2 class="text-pink-600 text-4xl text-center mb-5">Listado de productos</h2>
+
+                <div id="contenedor-productos" class="grid grid-cols-3 gap-4">
+                    <!--LAS TARJETAS DE LOS PRODUCTOS SE GENERAN DINAMICAMENTE AQUÍ-->
+                </div>
+
+            </section>
+
+        </main>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
