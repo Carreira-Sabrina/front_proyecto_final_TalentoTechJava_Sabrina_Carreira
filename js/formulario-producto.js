@@ -42,8 +42,6 @@ if(METODO == "PUT"){
     rellenarCampos();
 }
 
-
-
 //Si no hay id pasado como parámetro, el formulario es para crear un producto desde cero
 //no hay que pre-rellenar los campos del formulario ni hacer fetch
 

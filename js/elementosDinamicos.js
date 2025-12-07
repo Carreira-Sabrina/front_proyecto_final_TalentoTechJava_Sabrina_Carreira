@@ -86,11 +86,19 @@ export function generarElementoHTMLCategoria(item){
     //Clases Tailwind del contenedor
     contenedorCategoria.classList.add(...tailwindFlex,"shadow-md","text-3xl","p-5","mb-4");
 
-    //Vamos a guardar el id para ver como usarlo 🔍🦜
-    const idCategoria = item.id;
+    const lineaTexto = document.createElement("div");
+    lineaTexto.classList.add(...tailwindFlex);
+    //icono a modo de bullet-point
+    const iconoCategoria = document.createElement("i");
+    iconoCategoria.classList.add("bx", "bx-info-square","text-purple-600","mr-4","text-5xl");
 
-    const texto = document.createElement("p");
-    texto.innerText = "Categoría: " + item.nombre + " id: " + item.id;
+    const texto = document.createElement("p");   
+    
+    texto.innerText = " Id: " + item.id + " Nombre: " + item.nombre;
+
+    lineaTexto.appendChild(iconoCategoria);
+    lineaTexto.appendChild(texto);
+
 
     const contenedorBotones = document.createElement("div");
 
@@ -112,7 +120,8 @@ export function generarElementoHTMLCategoria(item){
     contenedorBotones.appendChild(botonEliminar);
 
     //Agregar el texto y los botones al contenedor principal
-    contenedorCategoria.appendChild(texto);
+    //contenedorCategoria.appendChild(texto);
+    contenedorCategoria.appendChild(lineaTexto);
     contenedorCategoria.appendChild(contenedorBotones);
 
     return contenedorCategoria;
