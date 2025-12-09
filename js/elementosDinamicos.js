@@ -14,7 +14,7 @@ export function generarElementoHTMLProducto(item){
     contenidoSuperior.classList.add("flex"); //🦜🦜🦜🦜
     
     const contenidoSuperiorIzq = document.createElement("div");
-    contenidoSuperiorIzq.classList.add(...tailwindFlexColumn,"items-center","gap-4" ,"border-2", "border-indigo-600", "p-4") //🦗🦗🦗🦗
+    contenidoSuperiorIzq.classList.add(...tailwindFlexColumn,"items-center","gap-4", "p-4","shadow-sm") //🦗🦗🦗🦗
 
     const nombre = document.createElement("h3");
     nombre.classList.add("text-2xl","font-bold", "text-center");
@@ -34,7 +34,7 @@ export function generarElementoHTMLProducto(item){
     contenidoSuperiorIzq.appendChild(imagen);
 
     const contenidoSuperiorDer = document.createElement("div");
-    contenidoSuperiorDer.classList.add("border-2", "border-red-600", "p-4")
+    contenidoSuperiorDer.classList.add("p-4")
 
     //La categoria
     const categoria = document.createElement("p");
